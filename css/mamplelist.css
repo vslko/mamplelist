@@ -1,0 +1,102 @@
+/*
+ * mAmpleList v0.1 Stylesheet
+ * Copyright (c) 2013 Vasilij Olhov
+ * Dual licensed under the MIT and GPL licenses
+ */
+
+.jspContainer { overflow: hidden; position: relative; }
+.jspPane { position: absolute; }
+.jspVerticalBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9px;
+    height: 100%;
+    background: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.jspHorizontalBar { position: absolute; bottom: 0; left: 0; width: 100%; height: 16px; background: red; }
+.jspVerticalBar *, .jspHorizontalBar * { margin: 0; padding: 0; }
+.jspCap { display: none; }
+.jspHorizontalBar .jspCap { float: left; }
+.jspTrack {
+    background:  #eee;
+    position: relative;
+    width: 9px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.jspDrag {
+    width: 9px;
+    cursor: pointer;
+    background: #09c3f1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag { float: left; height: 100%; }
+.jspArrow {
+    background: #09c3f1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-indent: -20000px;
+    display: block;
+    cursor: pointer;
+}
+.jspArrow.jspDisabled {
+    cursor: default;
+    background: #00b7e5;
+}
+.jspHorizontalBar .jspArrow { width: 9px; float: left; height: 100%; }
+.jspVerticalBar .jspArrow { height: 9px; }
+.jspVerticalBar .jspArrow:focus { outline: none; }
+.jspCorner { background: #eeeef4; float: left; height: 100%; }
+* html .jspCorner { margin: 0 -3px 0 0; }
+
+
+
+
+
+/* ------ AmpleList Styling ------ */
+.amply-list { position: relative; }
+
+.amply-list div.amply-list-item {
+    padding: 6px;
+    border-bottom: 1px solid #DDD;
+    margin:0px;
+    margin-left: -4px;
+    cursor: pointer;
+}
+.amply-list div.amply-list-item:hover { background-color: #F7F7F7; }
+
+.amply-list div.amply-list-item.amply-list-selected {
+    background-color: #F7F7F7 !important;
+    background-image: url('./amplelist_selector.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+div.amply-list-details {
+    margin: 0;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+    padding: 5px;
+    opacity: 0.92;
+    -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+    -moz-box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+    -o-box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+}
